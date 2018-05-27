@@ -8,6 +8,7 @@ import com.server.Server;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 
 public class Operations extends JFrame {
@@ -37,14 +38,15 @@ public class Operations extends JFrame {
                 Server server = Server.getInstance();
 
                 try {
-                    Data data = server.getDataByCard(card);
+                    Data<String, String, String, BigDecimal> data = server.getDataByCard(card);
 
-                    account.setText(data.getMoney().toString());
+                    account.setText(String.format("%.2f руб", data.getMoney().floatValue()));
                 } catch (CardWasNotFound cardWasNotFound) {
                     cardWasNotFound.printStackTrace();
                 }
             }
         });
+
         putMoney.addActionListener(e -> {
             BigDecimal bigDecimal = BigDecimal.valueOf(Double.parseDouble(textField1.getText()));
 
@@ -54,6 +56,7 @@ public class Operations extends JFrame {
                 JOptionPane.showMessageDialog(null, cardWasNotFound.getMessage());
             }
         });
+
         withdrawMoney.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

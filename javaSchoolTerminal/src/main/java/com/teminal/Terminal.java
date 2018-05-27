@@ -1,12 +1,15 @@
 package com.teminal;
 
 import com.exceptions.CardWasNotFound;
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamResolution;
 import com.server.Server;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 
 public class Terminal extends JFrame {
     private JButton button1;
@@ -23,6 +26,8 @@ public class Terminal extends JFrame {
     private JButton button7;
     private JLabel password;
     private JPanel panel;
+    private JPanel theifPanel;
+    private JLabel police;
     private String card;
     private JFrame mainFrame;
 
@@ -31,6 +36,7 @@ public class Terminal extends JFrame {
 
     private class Listner implements ActionListener {
         private String text;
+        private int errorEnter = 3;
 
         public Listner(String text) {
             this.text = text;
@@ -52,7 +58,31 @@ public class Terminal extends JFrame {
                         setVisible(false);
                         dispose();
                     } else {
-                        JOptionPane.showMessageDialog(null, "неверный пароль, повторите попытку");
+                        --errorEnter;
+
+                        if (errorEnter <= 0) {
+
+                            Webcam webcam = Webcam.getDefault();
+                            webcam.setViewSize(new Dimension(176, 144));
+                            webcam.open();
+
+                            // get image
+                            BufferedImage image = webcam.getImage();
+
+                            Graphics g = theifPanel.getGraphics();
+
+                            g.drawImage(image, 0, 0, null);
+
+                            theifPanel.paintComponents(g);
+                            webcam.close();
+
+                            police.setText("За Вами выехали...");
+
+
+                            return;
+                        }
+
+                        JOptionPane.showMessageDialog(null, "неверный пароль, повторите попытку(Осталось попыток = " + errorEnter);
                         password.setText(labelText);
                     }
                 } catch (CardWasNotFound cardWasNotFound) {
@@ -62,10 +92,11 @@ public class Terminal extends JFrame {
     }
 
     public Terminal(JFrame mainWindow, String card) {
-        super("terminal");
+        super("terminal " + card);
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
+
         mainWindow.setVisible(false);
 
         mainFrame = mainWindow;
@@ -85,10 +116,10 @@ public class Terminal extends JFrame {
 
 
         buttonClear.addActionListener(e -> password.setText(labelText));
-        buttonOut.addActionListener(e-> {
-                mainFrame.setVisible(true);
-                setVisible(false);
-                dispose();
+        buttonOut.addActionListener(e -> {
+            mainFrame.setVisible(true);
+            setVisible(false);
+            dispose();
         });
     }
 
