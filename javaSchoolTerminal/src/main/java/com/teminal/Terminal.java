@@ -30,13 +30,14 @@ public class Terminal extends JFrame {
     private JLabel police;
     private String card;
     private JFrame mainFrame;
+    private int errorEnter = 3;
 
     private final String labelText = "Введите пароль";
     public static final int PASSWORD_LENGTH = 4;
 
     private class Listner implements ActionListener {
         private String text;
-        private int errorEnter = 3;
+
 
         public Listner(String text) {
             this.text = text;
