@@ -8,8 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cache_proxy" />
         <module name="sicial_friend" />
-        <module name="social_add_friend" />
-        <module name="social_friend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

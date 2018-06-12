@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cache_proxy/cache_proxy.iml" filepath="$PROJECT_DIR$/cache_proxy/cache_proxy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/social_add_friend/social_add_friend.iml" filepath="$PROJECT_DIR$/social_add_friend/social_add_friend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/social_friend/social_friend.iml" filepath="$PROJECT_DIR$/social_friend/social_friend.iml" />
       <module fileurl="file://$PROJECT_DIR$/social_net.iml" filepath="$PROJECT_DIR$/social_net.iml" />
     </modules>
   </component>
