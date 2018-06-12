@@ -1,8 +1,13 @@
 package com.count_strings;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import static java.util.Arrays.asList;
 
 public class Solution {
 
@@ -61,12 +66,30 @@ public class Solution {
         System.out.println(result);
     }
 
+    public static void task2024_2() {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        int[] list = Arrays.stream(new int[n])
+                .map(operand -> scanner.nextInt())
+                .toArray();
+
+        int result = 0;
+
+        for (int i = 0; i < n / 2; ++i)
+            result += list[i] == list[n - 1 - i] ? 0 : 1;
+
+        System.out.println(result);
+    }
+
     public static void task2027() {
         Scanner scanner = new Scanner(System.in);
 
         List<Integer> list = new LinkedList<>();
 
         int n = scanner.nextInt();
+
         for (int i = 0; i < n; ++i)
             list.add(scanner.nextInt());
 
@@ -83,35 +106,30 @@ public class Solution {
             list.set(l2 + i, t);
         }
 
-        for (int i = 0; i < list.size(); ++i)
-            System.out.print(list.get(i) + " ");
+        list
+                .stream()
+                .forEach(integer -> System.out.print(String.format("%d ", integer)));
+
     }
 
     public static void task2036() {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        for (int i = 0; i < n; ++i) {
-            String string = scanner.nextLine();
-
-            if(string.split("[eyuioa]{3}").length == 1)
-                System.out.println(string);
-        }
-
+        Arrays
+                .stream(new String[scanner.nextInt()])
+                .map(s -> s = scanner.nextLine())
+                .filter(s -> s.split("[eyuioa]{3}").length == 1)
+                .forEach(System.out::println);
     }
-
 
     public static void task2038() {
         Scanner scanner = new Scanner(System.in);
 
-        String[] strings = scanner.nextLine().split("[^a-zA-Z]+");
-
-        int max = -1;
-
-        for(int i = 0; i < strings.length; ++i)
-            max = max < strings[i].length() ? strings[i].length() : max;
-
-        System.out.println(max);
+        System.out.println(Arrays
+                .stream(scanner.nextLine().split("[^a-zA-Z]+"))
+                .map(s -> s.length())
+                .max(Comparator.naturalOrder())
+                .get());
     }
 
     public static void task2039() {
