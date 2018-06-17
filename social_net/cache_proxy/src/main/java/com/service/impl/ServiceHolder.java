@@ -5,16 +5,13 @@ import com.serialise.SerializeUtil;
 import com.service.annotation.Cache;
 import com.sevice.inter.IService;
 
-import javax.xml.ws.Service;
 import java.io.File;
-import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 
 import static com.service.annotation.CacheType.FILE;
 import static java.util.stream.Collectors.toList;
@@ -49,7 +46,7 @@ public class ServiceHolder implements InvocationHandler {
                 }
                 case "read": {
                   return Files.list(Paths.get(System.getProperty("user.dir")))
-                          .map(path -> path.getFileName())
+                          .map(Path::getFileName)
                           .filter(path -> path.toString().startsWith(pref))
                             .map(path -> {
                                 try {

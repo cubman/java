@@ -1,12 +1,7 @@
 package com.entity;
 
-import com.serialise.SerializeUtil;
-import com.service.annotation.Cache;
 
 import java.io.Serializable;
-
-import static com.service.annotation.CacheType.IN_MEMORY;
-
 
 public class Person implements Serializable {
     private static int createdId;

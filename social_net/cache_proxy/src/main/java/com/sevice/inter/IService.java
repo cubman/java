@@ -3,7 +3,6 @@ package com.sevice.inter;
 import com.entity.Person;
 import com.service.annotation.Cache;
 
-import java.io.Serializable;
 import java.util.List;
 
 import static com.service.annotation.CacheType.FILE;
