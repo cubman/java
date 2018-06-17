@@ -1,18 +1,15 @@
 package com.stream;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Streams<T> {
 
-    List<? extends T> list;
+    List<T> list;
 
     private Streams(List<T> list) {
-        this.list = list;
+        this.list = new ArrayList<>(list);
     }
 
     public static<T> Streams<T> of(List<T> list) {
@@ -20,7 +17,7 @@ public class Streams<T> {
     }
 
     public Streams<T> filter(Predicate<T> predicate) {
-        List<T> result = new LinkedList<>();
+        List<T> result = new ArrayList<>();
 
         for (int i = 0; i < list.size(); ++i) {
             if(predicate.test(list.get(i)))
@@ -33,13 +30,9 @@ public class Streams<T> {
     }
 
     public Streams<T> transform(Function<? super T, T> function) {
-        List<T> result = new LinkedList<>();
-
         for (int i = 0; i < list.size(); ++i) {
-            result.add(function.apply(list.get(i)));
+            list.set(i, function.apply(list.get(i)));
         }
-
-        list = result;
 
         return this;
     }

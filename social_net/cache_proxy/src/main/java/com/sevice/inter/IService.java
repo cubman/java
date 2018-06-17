@@ -1,5 +1,6 @@
 package com.sevice.inter;
 
+import com.entity.Person;
 import com.service.annotation.Cache;
 
 import java.io.Serializable;
@@ -8,11 +9,13 @@ import java.util.List;
 import static com.service.annotation.CacheType.FILE;
 import static com.service.annotation.CacheType.IN_MEMORY;
 
-public interface IService extends Serializable {
-    @Cache(cacheType = FILE, fileNamePrefix = "data", identityBy = {String.class, double.class})
-    List<String> run(String item, double value);
+public interface IService {
+    @Cache(cacheType = FILE)
+    void save(Person person);
 
-    @Cache(cacheType = IN_MEMORY, listList = 100_000)
-    List<String> work(String item);
+    @Cache(cacheType = FILE)
+    List<Person> read();
 
+    @Cache(cacheType = FILE)
+    Person readById(int id);
 }

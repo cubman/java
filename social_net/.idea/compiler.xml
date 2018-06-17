@@ -9,14 +9,14 @@
         <module name="cache_proxy" />
         <module name="sicial_friend" />
         <module name="stream_exercise" />
+        <module name="test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="cache_proxy" target="1.8" />
-      <module name="social_add_friend" target="1.5" />
-      <module name="social_friend" target="1.5" />
       <module name="social_net" target="1.5" />
       <module name="stream_exercise" target="1.8" />
+      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

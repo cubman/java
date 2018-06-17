@@ -10,16 +10,16 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> someCollection = new LinkedList<>();
+        List<Person> someCollection = new LinkedList<>();
 
         someCollection.add(new Student("Иван", 21, 1));
         someCollection.add(new Student("Петр", 22, 2));
-        someCollection.add(new Student("Виталий", 31, 3));
+        someCollection.add(new Person("Виталий", 31));
         someCollection.add(new Student("Сергей", 19, 4));
 
         Map<String, Integer> m = Streams.of(someCollection)
                 .filter(p -> p.getAge() > 20)
-                .transform( p -> new Student(p.getName(), p.getAge() + 30, p.getCourse()))
+                .transform( p -> new Student(p.getName(), p.getAge() + 30, 4))
                                      .toMap(Person::getName, Person::getAge);
 
         m.forEach((s, integer) -> System.out.println(String.format("%s - %d", s, integer)));
