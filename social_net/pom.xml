@@ -12,6 +12,7 @@
         <module>cache_proxy</module>
         <module>stream_exercise</module>
         <module>test</module>
+        <module>thread_pools</module>
     </modules>
 
    <build>

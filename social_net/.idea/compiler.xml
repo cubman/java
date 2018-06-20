@@ -10,13 +10,15 @@
         <module name="sicial_friend" />
         <module name="stream_exercise" />
         <module name="test" />
+        <module name="thread_pools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="cache_proxy" target="1.8" />
       <module name="social_net" target="1.5" />
       <module name="stream_exercise" target="1.8" />
-      <module name="test" target="1.8" />
+      <module name="test" target="1.5" />
+      <module name="thread_pools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
