@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cache_proxy" />
+        <module name="school_chat_socket" />
         <module name="sicial_friend" />
         <module name="stream_exercise" />
         <module name="test" />
@@ -15,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="cache_proxy" target="1.8" />
+      <module name="school_chat_socket" target="1.8" />
       <module name="social_net" target="1.5" />
       <module name="stream_exercise" target="1.8" />
       <module name="test" target="1.5" />

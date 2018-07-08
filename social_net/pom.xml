@@ -13,6 +13,7 @@
         <module>stream_exercise</module>
         <module>test</module>
         <module>thread_pools</module>
+        <module>school_chat_socket</module>
     </modules>
 
    <build>

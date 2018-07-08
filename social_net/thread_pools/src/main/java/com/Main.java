@@ -4,6 +4,7 @@ import com.thead.impl.FixedThreadPool;
 import com.thead.impl.ScalableThreadPool;
 import com.thread.inter.ThreadPool;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -55,5 +56,13 @@ public class Main {
 
     public static void main(String[] args) {
         scalableTread();
+        int i = getX();
+        Object o;
+        o.y
     }
+
+    public static final int getX() { //1
+        return 10;
+    }
+
 }
