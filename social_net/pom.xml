@@ -15,6 +15,7 @@
         <module>thread_pools</module>
         <module>school_chat_socket</module>
         <module>goodcode</module>
+        <module>database</module>
     </modules>
 
    <build>

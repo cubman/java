@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cache_proxy/cache_proxy.iml" filepath="$PROJECT_DIR$/cache_proxy/cache_proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
       <module fileurl="file://$PROJECT_DIR$/goodcode/goodcode.iml" filepath="$PROJECT_DIR$/goodcode/goodcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/school_chat_socket/school_chat_socket.iml" filepath="$PROJECT_DIR$/school_chat_socket/school_chat_socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/social_net.iml" filepath="$PROJECT_DIR$/social_net.iml" />
