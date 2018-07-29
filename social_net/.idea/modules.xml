@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/school_chat_socket/school_chat_socket.iml" filepath="$PROJECT_DIR$/school_chat_socket/school_chat_socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/social_net.iml" filepath="$PROJECT_DIR$/social_net.iml" />
       <module fileurl="file://$PROJECT_DIR$/stream_exercise/stream_exercise.iml" filepath="$PROJECT_DIR$/stream_exercise/stream_exercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studenttimetable/studenttimetable.iml" filepath="$PROJECT_DIR$/studenttimetable/studenttimetable.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread_pools/thread_pools.iml" filepath="$PROJECT_DIR$/thread_pools/thread_pools.iml" />
     </modules>

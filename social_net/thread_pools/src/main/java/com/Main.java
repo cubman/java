@@ -58,7 +58,6 @@ public class Main {
         scalableTread();
         int i = getX();
         Object o;
-        o.y
     }
 
     public static final int getX() { //1

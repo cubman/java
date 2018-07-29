@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://C:/Program Files/Java/jdk1.8.0_151" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -12,6 +15,7 @@
         <module name="school_chat_socket" />
         <module name="sicial_friend" />
         <module name="stream_exercise" />
+        <module name="studenttimetable" />
         <module name="test" />
         <module name="thread_pools" />
       </profile>
@@ -23,6 +27,7 @@
       <module name="school_chat_socket" target="1.8" />
       <module name="social_net" target="1.5" />
       <module name="stream_exercise" target="1.8" />
+      <module name="studenttimetable" target="1.8" />
       <module name="test" target="1.5" />
       <module name="thread_pools" target="1.8" />
     </bytecodeTargetLevel>

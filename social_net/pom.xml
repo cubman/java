@@ -16,6 +16,7 @@
         <module>school_chat_socket</module>
         <module>goodcode</module>
         <module>database</module>
+        <module>studenttimetable</module>
     </modules>
 
    <build>
