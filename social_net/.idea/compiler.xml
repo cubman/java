@@ -12,6 +12,8 @@
         <module name="cache_proxy" />
         <module name="database" />
         <module name="goodcode" />
+        <module name="receptmenu" />
+        <module name="recipemenu" />
         <module name="school_chat_socket" />
         <module name="sicial_friend" />
         <module name="stream_exercise" />
@@ -24,6 +26,7 @@
       <module name="cache_proxy" target="1.8" />
       <module name="database" target="1.5" />
       <module name="goodcode" target="1.5" />
+      <module name="recipemenu" target="1.8" />
       <module name="school_chat_socket" target="1.8" />
       <module name="social_net" target="1.5" />
       <module name="stream_exercise" target="1.8" />

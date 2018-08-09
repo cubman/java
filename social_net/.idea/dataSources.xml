@@ -7,12 +7,6 @@
       <jdbc-driver>org.h2.Driver</jdbc-driver>
       <jdbc-url>jdbc:h2:mem:UsersData</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="mem:timetable" uuid="0cda726e-6e7f-4bca-8cc3-48970061f91e">
-      <driver-ref>h2.unified</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:mem:timetable</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="students" uuid="31374fa5-aae0-498a-9739-c4c18c2a468b">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>

@@ -8,6 +8,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/receptmenu/pom.xml" />
         <option value="$PROJECT_DIR$/sicial_friend/pom.xml" />
         <option value="$PROJECT_DIR$/social_add_friend/pom.xml" />
         <option value="$PROJECT_DIR$/social_friend/pom.xml" />

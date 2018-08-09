@@ -17,6 +17,8 @@
         <module>goodcode</module>
         <module>database</module>
         <module>studenttimetable</module>
+        <module>receptmenu</module>
+        <module>recipemenu</module>
     </modules>
 
    <build>
