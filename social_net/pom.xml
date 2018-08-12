@@ -19,6 +19,7 @@
         <module>studenttimetable</module>
         <module>receptmenu</module>
         <module>recipemenu</module>
+        <module>recipe_menu_hibernate</module>
     </modules>
 
    <build>
