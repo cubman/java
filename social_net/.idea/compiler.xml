@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cache_proxy" />
+        <module name="chatMQ" />
         <module name="database" />
         <module name="goodcode" />
         <module name="receptmenu" />
@@ -20,10 +21,12 @@
         <module name="studenttimetable" />
         <module name="test" />
         <module name="thread_pools" />
+        <module name="tictactoe" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="cache_proxy" target="1.8" />
+      <module name="chatMQ" target="1.7" />
       <module name="database" target="1.5" />
       <module name="goodcode" target="1.5" />
       <module name="recipe_menu_hibernate" target="1.8" />
@@ -34,6 +37,7 @@
       <module name="studenttimetable" target="1.8" />
       <module name="test" target="1.5" />
       <module name="thread_pools" target="1.8" />
+      <module name="tictactoe" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

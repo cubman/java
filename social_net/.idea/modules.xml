@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cache_proxy/cache_proxy.iml" filepath="$PROJECT_DIR$/cache_proxy/cache_proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatMQ/chatMQ.iml" filepath="$PROJECT_DIR$/chatMQ/chatMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
       <module fileurl="file://$PROJECT_DIR$/goodcode/goodcode.iml" filepath="$PROJECT_DIR$/goodcode/goodcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/recipe_menu_hibernate/recipe_menu_hibernate.iml" filepath="$PROJECT_DIR$/recipe_menu_hibernate/recipe_menu_hibernate.iml" />
@@ -12,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/studenttimetable/studenttimetable.iml" filepath="$PROJECT_DIR$/studenttimetable/studenttimetable.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread_pools/thread_pools.iml" filepath="$PROJECT_DIR$/thread_pools/thread_pools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tictactoe/tictactoe.iml" filepath="$PROJECT_DIR$/tictactoe/tictactoe.iml" />
     </modules>
   </component>
 </project>
